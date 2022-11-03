@@ -1,5 +1,6 @@
 # docker4156
 
+### this only build an image, not a volume or sth
 1. install docker (windows need wsl)
 2. git clone 
 3. sh dockerbuild.sh
