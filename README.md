@@ -1,24 +1,27 @@
 # docker4156
 
-1. 安装docker (windows需要wsl)
-2. git clone
+1. install docker (windows需要wsl)
+2. git clone 
 3. sh dockerbuild.sh
-4. 进入docker desktop应用点击Images 应该有个2004然后run取个名字
-5. 点击Containers有可以进入的terminal
-6. 打开本地vscode安装docker插件，然后右键你的container有个vscode打开
-7. git clone https://github.com/tiany7/COMS-4156-Project
-8. 进入目录 直接bazel build :person_service
+4. enter docker desktop and click 'Images' via 2004 then run 
+5. click 'Containers' and you can enter terminal
+6. open the local vscode and install docker plugin，right click your container and attach with vscode
+7. git clone https://github.com/tiany7/COMS-4156-Project 4156
+8. cd 4156/services/person_service
+9. bazel build :person_service
 
 ### mysql-server 
-我没有在docker内安装mysql服务，是在host开的mysql-server
+- I didn't install mysql-server insided the docker
+- the mysql-server is installed in the host machine
+#### if you know how to connect to a mysql-server installed in the docker from the docker please notify me, I don't know how to set the docker port correctly
 *********************************
-连接mysql的ip请使用"host.docker.internal"
-不是 127.0.0.1 或者 0.0.0.0
-使用docker内的vscode的mysql插件尝试连接
-端口好像连接conn会默认3306如果有变动自行设置
+- connecting the host mysql-server use host name / ip as "host.docker.internal"
+- not 127.0.0.1 or 0.0.0.0
+- try mysql plugin from docker to connect, need add port 3306
+- in code, it seems no need to add port "con = driver->connect("host.docker.internal", "root", "");"
 *********************************
 
 
-### 安装版本是 ubuntu 20.04 应该可以编译成功
-我18.04一直有问题，如果你18.04成功了告诉我
+### ubuntu version is 20.04
+I have trouble with 18.04 of some DYYNAMIC_ALLOC issue
 
