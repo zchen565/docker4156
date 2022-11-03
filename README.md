@@ -1,6 +1,6 @@
 # docker4156
 
-1. install docker (windows需要wsl)
+1. install docker (windows need wsl)
 2. git clone 
 3. sh dockerbuild.sh
 4. enter docker desktop and click 'Images' via 2004 then run 
