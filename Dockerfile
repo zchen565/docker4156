@@ -6,7 +6,6 @@ ARG UID
 ARG GID
 ARG DEBIAN_FRONTEND=noninteractive
 
-
 RUN apt update && apt install -y \
   build-essential \
   check \
@@ -26,12 +25,9 @@ RUN apt update && apt install -y \
   autoconf \
   libtool \
   pkg-config \
-  cmake
-# cmake 
-# RUN wget -q -O cmake-linux.sh https://github.com/Kitware/CMake/releases/download/v3.19.6/cmake-3.19.6-Linux-x86_64.sh
-# RUN sh cmake-linux.sh -- --skip-license --prefix=$/usr/local
-# RUN rm cmake-linux.sh
-# RUN 
+  cmake \
+  mysql-server \
+  net-tools
 # bazel
 RUN wget https://github.com/bazelbuild/bazel/releases/download/4.0.0/bazel-4.0.0-installer-linux-x86_64.sh
 RUN chmod +x bazel-4.0.0-installer-linux-x86_64.sh
@@ -39,8 +35,7 @@ RUN ./bazel-4.0.0-installer-linux-x86_64.sh
 RUN export PATH="$PATH:$HOME/bin"
 RUN rm *.sh
 
-# install mysql-server & grpc yourself
-# otherwish the image is too big
+# grpc is installed during bazel build
 
 #Generates group
 # RUN addgroup --gid ${GID} ${GNAME}
