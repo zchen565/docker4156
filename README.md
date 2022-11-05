@@ -1,5 +1,10 @@
 # docker4156
 
+## TODO
+- how to connect the mysql-server outside the docker
+- how to bind and receive http in gcp
+- should the mysql-server installed in another docker ?
+
 ### this only build an image
 1. install docker (windows need wsl)
 2. git clone https://github.com/zchen565/docker4156 
