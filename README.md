@@ -19,7 +19,7 @@
 2. $service mysql start
 2. $mysql
 3. > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
-- the connection is (127.0.0.3306, root, 123456) 
+- the connection is ("127.0.0.1", 33060, "root", "123456") 
 - NOTE!! the current setup cannot connected by host, only connect it via project inside docker
 
 ### Bazel build Project : better to write a bash 
