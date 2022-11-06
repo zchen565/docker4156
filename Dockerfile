@@ -47,6 +47,10 @@ RUN dpkg -i *9*.deb
 RUN dpkg -i *dev*.deb
 RUN rm *.deb
 
+# redis
+
+# kafka
+
 # grpc is installed during bazel build
 
 #Generates group
