@@ -13,7 +13,8 @@
 5. click 'Containers' and you can enter terminal
 6. open the local vscode and install docker plugin，right click your container and attach with vscode
 
-### Set up MySQL in Docker
+### Set up MySQL in Docker !!!!!!!!!!!!
+- mysqlx/xdevapi.h is current in use !
 1. go to docker terminal
 2. $service mysql start
 2. $mysql
@@ -21,7 +22,7 @@
 - the connection is (127.0.0.3306, root, 123456) 
 - NOTE!! the current setup cannot connected by host, only connect it via project inside docker
 
-### Bazel build Project
+### Bazel build Project : better to write a bash 
 - the database and table are not unified, change by your own currently
 1. git clone https://github.com/tiany7/COMS-4156-Project 4156
 2. cd /4156/services/person_service
