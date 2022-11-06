@@ -36,6 +36,7 @@ RUN ./bazel-4.0.0-installer-linux-x86_64.sh
 RUN export PATH="$PATH:$HOME/bin"
 RUN rm *.sh
 
+# mysqlx/xdevapi
 RUN wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-community-client-plugins_8.0.31-1ubuntu20.04_amd64.deb
 RUN wget https://dev.mysql.com/get/Downloads/Connector-C++/libmysqlcppconn8-2_8.0.31-1ubuntu20.04_amd64.deb
 RUN wget https://dev.mysql.com/get/Downloads/Connector-C++/libmysqlcppconn9_8.0.31-1ubuntu20.04_amd64.deb
