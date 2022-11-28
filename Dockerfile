@@ -29,12 +29,6 @@ RUN apt update && apt install -y \
   mysql-server \
   net-tools \
   dpkg
-# bazel
-RUN wget https://github.com/bazelbuild/bazel/releases/download/4.0.0/bazel-4.0.0-installer-linux-x86_64.sh
-RUN chmod +x bazel-4.0.0-installer-linux-x86_64.sh
-RUN ./bazel-4.0.0-installer-linux-x86_64.sh
-RUN export PATH="$PATH:$HOME/bin"
-RUN rm *.sh
 
 # mysqlx/xdevapi
 RUN wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-community-client-plugins_8.0.31-1ubuntu20.04_amd64.deb
@@ -47,6 +41,13 @@ RUN dpkg -i *9*.deb
 RUN dpkg -i *dev*.deb
 RUN rm *.deb
 
+# bazel
+RUN wget https://github.com/bazelbuild/bazel/releases/download/4.0.0/bazel-4.0.0-installer-linux-x86_64.sh
+RUN chmod +x bazel-4.0.0-installer-linux-x86_64.sh
+RUN ./bazel-4.0.0-installer-linux-x86_64.sh
+RUN export PATH="$PATH:$HOME/bin"
+RUN rm *.sh
+
 # redis
 
 # kafka
@@ -58,6 +59,8 @@ RUN rm *.deb
 
 #Generates user
 # RUN adduser --disabled-password --gecos '' --uid ${UID} --gid ${GID} --home /home/${UNAME} ${UNAME} && adduser ${UNAME} sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+# EXPOSE 3306 33060
 
 USER root
 WORKDIR /root
